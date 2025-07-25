@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fábrica - Tienda de Maderas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Un gris muy oscuro, casi negro, pero más suave */
+            color: #ffffff; /* Texto blanco */
+        }
+        .tab-button.active {
+            background-color: #fb923c; /* Naranja más suave (orange-400) */
+            color: #ffffff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-950 text-white p-4 shadow-lg"> <!-- Negro más suave -->
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-4xl font-extrabold text-orange-400 mb-4 md:mb-0">La Fábrica</h1> <!-- Naranja más suave -->
+            <nav class="flex flex-wrap justify-center space-x-2 md:space-x-4">
+                <button class="tab-button p-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-orange-500 active" data-tab="inicio">Inicio</button> <!-- Hover naranja medio -->
+                <button class="tab-button p-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-orange-500" data-tab="fenolicos">Fenólicos</button>
+                <button class="tab-button p-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-orange-500" data-tab="puntales">Puntales</button>
+                <button class="tab-button p-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-orange-500" data-tab="tablas">Tablas</button>
+                <button class="tab-button p-3 rounded-lg font-semibold transition-colors duration-300 hover:bg-orange-500" data-tab="contacto">Contacto</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto p-6 md:p-8">
+        <!-- Inicio Tab Content -->
+        <section id="inicio" class="tab-content active bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-orange-400 mb-4">Bienvenido a La Fábrica</h2> <!-- Naranja más suave -->
+            <p class="text-lg mb-4">
+                En La Fábrica, somos tu proveedor de confianza para todo tipo de maderas. Ofrecemos productos de la más alta calidad para tus proyectos de construcción, carpintería y decoración.
+            </p>
+            <p class="text-lg mb-4">
+                Explora nuestras categorías de productos: Fenólicos, Puntales y Tablas, y encuentra exactamente lo que necesitas. Nuestro compromiso es brindarte la mejor atención y los materiales más duraderos.
+            </p>
+            <img src="https://placehold.co/800x400/fb923c/ffffff?text=La+Fabrica+Maderas" alt="Imagen de La Fábrica Maderas" class="w-full h-auto rounded-lg shadow-md mt-6"> <!-- Naranja más suave en placeholder -->
+        </section>
+
+        <!-- Fenólicos Tab Content -->
+        <section id="fenolicos" class="tab-content bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-orange-400 mb-4">Fenólicos</h2> <!-- Naranja más suave -->
+            <p class="text-lg mb-4">
+                Nuestros tableros fenólicos son ideales para aplicaciones que requieren alta resistencia a la humedad y durabilidad. Perfectos para encofrados, estructuras exteriores y mobiliario de alta exigencia.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Fenolico+18mm" alt="Fenólico de 18mm" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Fenólico 18mm</h3> <!-- Naranja más suave -->
+                    <p>Tablero de 18mm de espesor, alta resistencia y durabilidad.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Fenolico+12mm" alt="Fenólico de 12mm" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Fenólico 12mm</h3> <!-- Naranja más suave -->
+                    <p>Tablero de 12mm de espesor, ligero y versátil.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Fenolico+Especial" alt="Fenólico Especial" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Fenólico Especial</h3> <!-- Naranja más suave -->
+                    <p>Tablero con tratamiento especial para usos extremos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puntales Tab Content -->
+        <section id="puntales" class="tab-content bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-orange-400 mb-4">Puntales</h2> <!-- Naranja más suave -->
+            <p class="text-lg mb-4">
+                Nuestros puntales de madera son esenciales para el soporte temporal en obras de construcción. Ofrecemos variedad de medidas y maderas para garantizar la seguridad y estabilidad de tus proyectos.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Puntal+Pino" alt="Puntal de Pino" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Puntal de Pino</h3> <!-- Naranja más suave -->
+                    <p>Puntales de pino, ligeros y resistentes para múltiples usos.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Puntal+Eucalipto" alt="Puntal de Eucalipto" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Puntal de Eucalipto</h3> <!-- Naranja más suave -->
+                    <p>Puntales de eucalipto, mayor densidad y durabilidad.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Puntal+Ajustable" alt="Puntal Ajustable" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Puntal Ajustable</h3> <!-- Naranja más suave -->
+                    <p>Puntales ajustables para mayor versatilidad en la obra.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tablas Tab Content -->
+        <section id="tablas" class="tab-content bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-orange-400 mb-4">Tablas</h2> <!-- Naranja más suave -->
+            <p class="text-lg mb-4">
+                Ofrecemos una amplia variedad de tablas de madera para tus proyectos de carpintería, revestimientos, pisos y más. Disponibles en diferentes maderas y acabados.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Tabla+Pino+Cepillado" alt="Tabla de Pino Cepillado" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Tabla de Pino Cepillado</h3> <!-- Naranja más suave -->
+                    <p>Tablas de pino cepillado, listas para usar en tus proyectos.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Tabla+Dura" alt="Tabla de Madera Dura" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Tabla de Madera Dura</h3> <!-- Naranja más suave -->
+                    <p>Tablas de maderas duras para mayor resistencia y belleza.</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <img src="https://placehold.co/400x300/fb923c/ffffff?text=Tabla+Rustica" alt="Tabla Rústica" class="w-full h-auto rounded-lg mb-4"> <!-- Naranja más suave en placeholder -->
+                    <h3 class="text-xl font-semibold text-orange-400 mb-2">Tabla Rústica</h3> <!-- Naranja más suave -->
+                    <p>Tablas con acabado rústico, perfectas para decoración y ambientes cálidos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Tab Content -->
+        <section id="contacto" class="tab-content bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+            <h2 class="text-3xl font-bold text-orange-400 mb-4">Contacto</h2> <!-- Naranja más suave -->
+            <p class="text-lg mb-4">
+                ¿Tienes alguna pregunta o necesitas un presupuesto? No dudes en contactarnos.
+            </p>
+            <div class="space-y-4">
+                <p class="text-lg"><strong class="text-orange-400">Dirección:</strong> Calle Ficticia 123, Ciudad, País</p> <!-- Naranja más suave -->
+                <p class="text-lg"><strong class="text-orange-400">Teléfono:</strong> +123 456 7890</p> <!-- Naranja más suave -->
+                <p class="text-lg"><strong class="text-orange-400">Email:</strong> info@lafabrica.com</p> <!-- Naranja más suave -->
+                <p class="text-lg"><strong class="text-orange-400">Horario:</strong> Lunes a Viernes: 8:00 AM - 6:00 PM</p> <!-- Naranja más suave -->
+            </div>
+            <form class="mt-6 space-y-4">
+                <div>
+                    <label for="name" class="block text-lg font-semibold text-orange-400">Nombre:</label> <!-- Naranja más suave -->
+                    <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-orange-400" placeholder="Tu nombre"> <!-- Naranja más suave en focus -->
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-semibold text-orange-400">Email:</label> <!-- Naranja más suave -->
+                    <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-orange-400" placeholder="tu@email.com"> <!-- Naranja más suave en focus -->
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-semibold text-orange-400">Mensaje:</label> <!-- Naranja más suave -->
+                    <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-orange-400" placeholder="Tu mensaje"></textarea> <!-- Naranja más suave en focus -->
+                </div>
+                <button type="submit" class="bg-orange-400 text-white p-3 rounded-lg font-semibold hover:bg-orange-500 transition-colors duration-300">Enviar Mensaje</button> <!-- Naranja más suave y hover naranja medio -->
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white p-4 text-center mt-8"> <!-- Negro más suave -->
+        <div class="container mx-auto">
+            <p>&copy; 2025 La Fábrica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // Function to show a specific tab
+            const showTab = (tabId) => {
+                // Remove 'active' class from all buttons and content
+                tabButtons.forEach(button => button.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add 'active' class to the clicked button
+                const activeButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+
+                // Add 'active' class to the corresponding content
+                const activeContent = document.getElementById(tabId);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+            };
+
+            // Add click event listeners to all tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab;
+                    showTab(tabId);
+                });
+            });
+
+            // Show the 'inicio' tab by default when the page loads
+            showTab('inicio');
+        });
+    </script>
+</body>
+</html>
